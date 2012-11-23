@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+　　     <item android:maxLevel="00"  android:drawable="@drawable/light_on" />
+　　     <item android:maxLevel="01"  android:drawable="@drawable/light_off" />
+　　     <item android:maxLevel="29" android:drawable="@drawable/light_on" />
+　　     <item android:maxLevel="49" android:drawable="@drawable/light_on" />
+　　     <item android:maxLevel="69"  android:drawable="@drawable/light_on" />
+　　     <item android:maxLevel="89" android:drawable="@drawable/light_on" />
+　　     <item android:maxLevel="100" android:drawable="@drawable/light_on" />
+　　</level-list>

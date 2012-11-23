@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="activity.cn"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>      
+		
+		<!-- 注册同步服务器Activity -->
+		<activity android:name=".syncserver" android:noHistory="true"></activity>
+		<!-- 设置 -->
+		<activity android:name=".setText" android:noHistory="true"></activity>
+		<!-- 注册谷歌地图 Activity  -->
+		<activity android:name=".LoadMap"
+				  android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<!-- 声明需要使用Google Map API -->
+		<uses-library android:name="com.google.android.maps" />   
+		
+		
+		<!-- 注册receive-->
+		<receiver android:name="sendsms.cn.getsms">    	
+  			<intent-filter> 
+   				 <action 
+   				   android:name="android.provider.Telephony.SMS_RECEIVED" /> 
+ 			 </intent-filter> 
+  	  </receiver>
+  	  
+
+    </application>
+    
+    <!-- 添加权限 -->
+    
+	
+	<uses-permission android:name="android.permission.INTERNET" /><!-- Google Map需要访问互联网，所以必须授权 -->
+	
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name = "android.permission.RECEIVE_SMS" />
+
+</manifest> 
